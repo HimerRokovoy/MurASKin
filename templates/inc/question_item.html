@@ -1,0 +1,42 @@
+{% load static %}
+<div class="question">
+    <div class="row">
+        <div class="col-2">
+            <div class="avatar">
+                    <img src = "{%static 'img/thumb-263853.jpg'%}" alt=""/>
+            </div>
+            <div class="likebox">
+            <div class="row">
+              <div class="col-6" style=" padding: 15px;">
+              
+              </div>
+              <div class="col-6">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <h2 class="question-title">
+                <a href="{% url 'question' question_id=question.id %}">{{question.title}}</a>
+            </h2>
+            <div class="question-text">
+              {{question.text}}
+            </div> 
+        </div>
+        <div class="col-2">
+          <div class="Tags">
+            <h6>Tags:</h6>
+            {% for tag in question.tags%}
+            <a href="#">{{tag}}</a>
+            {%endfor%}
+            
+          </div>
+          
+            <h6 style="margin-top: 10px;"><a href=>Answer({{question.answers_number}})</a></h6>
+          
+      </div>
+      
+    </div>
+</div>
