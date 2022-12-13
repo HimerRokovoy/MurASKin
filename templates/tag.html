@@ -1,0 +1,25 @@
+{%extends "inc/base.html"%}
+
+{% load static %}
+
+{%block content%}
+<h2>Tag</h2>
+
+
+{% for question in questions %}
+
+{%include 'inc/question_item.html'%}
+
+{% endfor %}
+
+
+      
+ 
+            
+        
+     
+ {%include 'inc/paginator.html'%}       
+    
+   
+
+{%endblock%}

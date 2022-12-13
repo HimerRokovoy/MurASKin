@@ -34,9 +34,7 @@
         <div class="col-2">
           <div class="Tags">
             <h6>Tags:</h6>
-            {% for tag in question.tags%}
-            <a href="#">{{tag}}</a>
-            {%endfor%}
+            {%include 'inc/taglist.html'%}
           </div>
         
       </div>
@@ -55,72 +53,9 @@
 </form>
 <h2>Answers</h2>
 
-<div class="Answers">
-  <div class="row">
-      <div class="col-2">
-          <div class="avatar">
-                  <img src = "{%static 'img/HD-wallpaper-anime-demon-slayer-kimetsu-no-yaiba-tengen-uzui.jpg'%}" alt=""/>
-          </div>
-        <div class="likebox">
-          <div class="row">
-            <div class="col-6" style=" padding: 15px;">
-            
-            </div>
-            <div class="col-6">
-              <button></button>
-              <button></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-8">
-          <div class="answer-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit perspiciatis magni fuga eligendi nostrum illo dolore excepturi sint omnis debitis!
-          </div> 
-          <div class="form-check" style="margin-top: 20px;">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"  disabled>
-            <label class="form-check-label" for="flexCheckCheckedDisabled">
-              correct
-            </label>
-          </div>
-      </div>
-      
-    
-    
-  </div>
-</div>
-<div class="Answers">
-<div class="row">
-    <div class="col-2">
-        <div class="avatar">
-                <img src = "{%static 'img/maxresdefault.jpg'%}" alt=""/>
-        </div>
-      <div class="likebox">
-        <div class="row">
-          <div class="col-6" style=" padding: 15px;">
-            
-          </div>
-          <div class="col-6">
-            <button></button>
-            <button></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-8">
-        <div class="answer-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit perspiciatis magni fuga eligendi nostrum illo dolore excepturi sint omnis debitis!
-        </div> 
-        <div class="form-check" style="margin-top: 20px;">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-          <label class="form-check-label" for="flexCheckCheckedDisabled">
-            correct
-          </label>
-        </div>
-      
-    </div>
-    </div>
-</div>
+
+
+
 {%include 'inc/paginator.html'%}       
 {%endblock%}
                 

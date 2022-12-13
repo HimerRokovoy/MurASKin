@@ -28,10 +28,7 @@
         <div class="col-2">
           <div class="Tags">
             <h6>Tags:</h6>
-            {% for tag in question.tags%}
-            <a href="#">{{tag}}</a>
-            {%endfor%}
-            
+            {%include 'inc/taglist.html'%} 
           </div>
           
             <h6 style="margin-top: 10px;"><a href=>Answer({{question.answers_number}})</a></h6>

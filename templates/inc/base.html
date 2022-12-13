@@ -81,7 +81,7 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{% url 'index' %}">
         <img src="{% static 'img/letter-m.png'%}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         Mur<span class="MurASKin">ASK</span>in
       </a>
@@ -99,7 +99,7 @@
         </div>
         <h8 id="nick">nickname</h8>
         <div class="logout">
-          <a href="">settings</a>
+          <a href="{% url 'settings' %}">settings</a>
           <a href="">log out</a>
         </div>
         
@@ -112,10 +112,11 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-   <h1>New questions</h1>
+   
     <div class="row">
         <div class="col-7">
             {%block content%}
+            
             {%endblock%}
         </div>
      
@@ -123,7 +124,7 @@
           <h2>Popular Tags</h2>
          <div class="row">
           <div class="col-2 offset-1">
-            <a href="">HTML</a>
+            <a href="{% url 'tag' %}">HTML</a>
           </div>
           <div class="col-2 offset-1">
             <a href="">CSS</a>
