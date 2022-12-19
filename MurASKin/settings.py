@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     
 ]
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

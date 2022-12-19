@@ -6,7 +6,7 @@ from .import models
 
 
 def index(request):
-    context = {'questions': models.QUESTIONS}
+    context = {'questions': models.Question}
     return render(request, 'index.html', context = context)
 
 def question(request, question_id : int):
