@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from app.models import User, Tag, Like, Question, Answer
+from app.models import User, Tag, Like, Question, Answer, Profile
 from faker import Faker
 import random
 from random import choice
@@ -12,6 +12,11 @@ class Command(BaseCommand):
         parser.add_argument('--tags')
         parser.add_argument('--question')
         parser.add_argument('--answer')
+        parser.add_argument('--profile')
+
+    
+    
+
         
 
     def fill_users(self, count):
@@ -25,6 +30,16 @@ class Command(BaseCommand):
         for i in range(count):
             users.append(User(username=self.faker.user_name() + str(i)))
         User.objects.bulk_create(users, count)
+
+        
+    def fill_profile(self, count):
+        profiles = []
+        for i in range(count):
+            profiles.append(Profile(user=User.objects.all().get(id=i),
+                                    nickname=self.faker.user_name() + str(i)))
+        Profiles.objects.bulk_create(users, count)
+            
+            
 
     def fill_tags(self, count):
         tags = []
@@ -81,3 +96,5 @@ class Command(BaseCommand):
             self.fill_question(100000)
         if options['answer']:
             self.fill_answer(1000000)
+        if options['profile']:
+            self.fill_profile(10000)
